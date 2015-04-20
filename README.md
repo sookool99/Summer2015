@@ -1,4 +1,5 @@
 # Summer2015
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/rainbee2214/Summer2015?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Installation Instructions:
 
