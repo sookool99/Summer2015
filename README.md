@@ -33,3 +33,11 @@ sudo pip3 install matplotlib
 
 ##Will open in a web browser:
 ```ipython3 notebook```
+
+# Resources
+
+[Theano Tutorial](http://deeplearning.net/software/theano/tutorial/)
+
+[Numpy Tutorial](http://wiki.scipy.org/Tentative_NumPy_Tutorial)
+
+[100 Numpy exercises](https://github.com/rougier/numpy-100)
