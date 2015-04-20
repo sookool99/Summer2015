@@ -41,3 +41,5 @@ sudo pip3 install matplotlib
 [Numpy Tutorial](http://wiki.scipy.org/Tentative_NumPy_Tutorial)
 
 [100 Numpy exercises](https://github.com/rougier/numpy-100)
+
+[theano brodcast example](http://deeplearning.net/software/theano/library/tensor/basic.html#libdoc-tensor-broadcastable)
