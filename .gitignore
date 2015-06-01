@@ -1,2 +1,5 @@
 *.txt
 mnist.pkl
+.idea
+__pycache__
+*.pyc
