@@ -1,6 +1,9 @@
 # Summer2015
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/rainbee2214/Summer2015?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+## IMPORTANT
+if you are going to open python files on pycharm you should open the project from pythonCode folder not the root folder (this one). pycharm seem to have issues when there are nootbook files because it will actually run the server for notebook and send all output to notebook instead of console. opening in pythonCode folder solves everything!
+
 Installation Instructions:
 
 ##Mac OS X
@@ -8,8 +11,8 @@ install homebrew
 
 ```
 brew install python3
-pip3 install numpy ipython  
-pip3 install theano  
+pip3 install numpy ipython
+pip3 install theano
 pip3 install requests
 pip3 install jinja2
 pip3 install tornado
