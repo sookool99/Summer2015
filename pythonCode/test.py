@@ -1,4 +1,6 @@
 __author__ = 'shawn'
-from plotting import plot
 
-plot.plotData()
+import theano
+import pyopencl
+print(pyopencl.device_info.DRIVER_VERSION)
+#print(theano.config)

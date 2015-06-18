@@ -7,3 +7,5 @@ This is where you can call your functions from each of the file folders where th
 At the base of each folder such as `calculation` folder there is a script that handles all the overhead and requiring what you need.
 if for some reason you want to use the actual script in lib, for reasons of memory or anything else then it is your responsibility to
 enter the proper information.
+
+midiutil docs: `http://www.emergentmusics.org/midiutil`

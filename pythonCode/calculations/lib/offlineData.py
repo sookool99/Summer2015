@@ -5,12 +5,13 @@ from random import randint
 import sys
 from calculations.lib import error
 
-def calcOfflineData(deltaX, deltaY,data, meshNumber,iterations, fileName):
+
+def calc_offline_data(delta_x, delta_y, data, mesh_number, iterations, file_name):
     data = []
-    x = np.linspace(-10,10,meshNumber)
-    y = np.linspace(-10,10,meshNumber)
-    x, y = np.meshgrid(x,y)
-    if(isinstance(data,str) or not len(data)):
+    x = np.linspace(-10, 10, mesh_number)
+    y = np.linspace(-10, 10, mesh_number)
+    x, y = np.meshgrid(x, y)
+    if isinstance(data, str) or not len(data):
         if not len(data):
             data = 'Data.txt'
         with open('dataFiles/' + data) as fp:
@@ -18,36 +19,36 @@ def calcOfflineData(deltaX, deltaY,data, meshNumber,iterations, fileName):
             for line in reader:
                 data.append([int(line[0]), float(line[1]), float(line[2])])
 
-    changingIndex = randint(0,len(data) -1)
+    changing_index = randint(0, len(data) - 1)
 
-    dataFile = open(fileName, "w")
-    writer = csv.writer(dataFile, delimiter=',')
-    writer.writerow([deltaX, deltaY,changingIndex, iterations, meshNumber])
+    data_file = open(file_name, "w")
+    writer = csv.writer(data_file, delimiter=',')
+    writer.writerow([delta_x, delta_y, changing_index, iterations, mesh_number])
 
-    for i in range(0,iterations):
-        print("On Iteration %d of moving points"%i)
+    for i in range(0, iterations):
+        print("On Iteration %d of moving points" % i)
         sys.stdout.flush()
-        data[changingIndex][1] += deltaX
-        data[changingIndex][2] += deltaY
-        if data[changingIndex][1] < -10:
-            deltaX *= -1
-        if data[changingIndex][1] > 10:
-            deltaX *= -1
-        if data[changingIndex][2] < -10:
-            deltaY *= -1
-        if data[changingIndex][2] > 10:
-            deltaY *= -1
+        data[changing_index][1] += delta_x
+        data[changing_index][2] += delta_y
+        if data[changing_index][1] < -10:
+            delta_x *= -1
+        if data[changing_index][1] > 10:
+            delta_x *= -1
+        if data[changing_index][2] < -10:
+            delta_y *= -1
+        if data[changing_index][2] > 10:
+            delta_y *= -1
         counter = 0
-        totalIter = meshNumber**2
-        print("Done(out of %d):"%totalIter, end="")
-        zData = []
-        for X,Y in zip(np.ravel(x), np.ravel(y)):
-            zData.extend([error.calculateError(X,Y, data,False)])
-            if counter % int((totalIter / 10)) == 0:
-                print(" %d"%counter, end="")
+        total_iter = mesh_number ** 2
+        print("Done(out of %d):" % total_iter, end="")
+        z_data = []
+        for X, Y in zip(np.ravel(x), np.ravel(y)):
+            z_data.extend([error.calculateError(X, Y, data, False)])
+            if counter % int((total_iter / 10)) == 0:
+                print(" %d" % counter, end="")
             counter += 1
-        z = np.array(zData)
+        z = np.array(z_data)
         print('\n', end="")
         writer.writerow(z)
-    dataFile.close()
+    data_file.close()
     print("Done Offline Calculations!")

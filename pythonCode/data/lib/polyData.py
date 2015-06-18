@@ -12,7 +12,7 @@ folderName = 'dataFiles/'
 # @display: true of false if you wish to see what data looks like on plot
 # @ofName: out file name where to save data to. If you do not wish to save the data to a file
 #       Then just dont pass anything for this param.
-def generatePolynomialData(coef, dataRange, size, display, ofName):
+def generate_polynomial_data(coef, dataRange, size, display, ofName):
     x = np.random.uniform(dataRange[0][0],dataRange[0][1],size)
     y = np.random.uniform(dataRange[1][0],dataRange[1][1],size)
 
@@ -21,7 +21,7 @@ def generatePolynomialData(coef, dataRange, size, display, ofName):
         writer = csv.writer(data, delimiter=',')
     points = []
     for i in range(0,size):
-        fx = calculatePolynomial(x[i], coef)
+        fx = calculate_polynomial(x[i], coef)
         if y[i] > fx:
             points.extend([[1,x[i],y[i]]])
             if ofName:
@@ -44,5 +44,5 @@ def generatePolynomialData(coef, dataRange, size, display, ofName):
     return points
 
 # function only used for generatePolynomialData() no need to test this function ...
-def calculatePolynomial(x, coef):
+def calculate_polynomial(x, coef):
     return coef[0]*x**5 + coef[1]*x**4 + coef[2]*x**3 + coef[3]*x**2 + coef[4]
