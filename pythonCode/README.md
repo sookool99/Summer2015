@@ -9,3 +9,20 @@ if for some reason you want to use the actual script in lib, for reasons of memo
 enter the proper information.
 
 midiutil docs: `http://www.emergentmusics.org/midiutil`
+
+# Dependacies
+There are new dependancies being the use of `mido` package for dealing with midi files and pygames for playing the
+midi files through python.
+
+## Instilation
+
+### mido
+```
+pip3 install mido
+pip3 install --pre python-rtmidi
+```
+
+### pygames
+````
+pip3 install pygame
+````
