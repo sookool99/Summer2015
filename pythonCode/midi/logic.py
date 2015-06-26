@@ -2,6 +2,7 @@ __author__ = 'shawn'
 from midi.lib import playMidiFile
 from midi.lib import midi_stream
 from midi.lib import midi_from_message
+from midi.lib import keyNotes
 
 
 def play_file(file_name):
@@ -19,3 +20,12 @@ def create_file_from_list(messages, file_name='new_song.mid'):
 def save_and_play(file_name="new_song.mid", display=True):
     start_keyboard_stream(file_name, display)
     play_file(file_name)
+
+def get_all_notes():
+    return keyNotes.get_all_key_notes()
+
+def get_notes():
+    return keyNotes.get_notes()
+
+def get_range_of_notes(start, end):
+    return keyNotes.get_all_in_range(start, end)

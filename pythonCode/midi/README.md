@@ -47,3 +47,10 @@ logic.create_file_from_list(tmp,"test123.mid")
 
 logic.play_file("test123.mid")
 ```
+
+## get_notes and get_all_notes
+This function will return for you a dict mapping notes/key values (integer numbers) to their corresponding letters.
+
+Just call the function like `allNotes = logic.get_all_notes()` or `smallKeyboardMidiOctaveNotes = logic.get_notes()`
+
+If needed, because your keyboard has a different midi range being able to play then you can specify a different range of notes.
