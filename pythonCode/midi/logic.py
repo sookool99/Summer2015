@@ -29,3 +29,12 @@ def get_notes():
 
 def get_range_of_notes(start, end):
     return keyNotes.get_all_in_range(start, end)
+
+def get_length_notes():
+    return keyNotes.get_length_note()
+
+def get_note_mapping(start, end):
+    return keyNotes.get_note_mapping(start, end)
+
+def get_all_note_mapping():
+    return keyNotes.get_all_note_mapping()
