@@ -26,3 +26,4 @@ if for some reason you want to use the actual script in lib, for reasons of memo
 enter the proper information.
 
 midiutil docs: `http://www.emergentmusics.org/midiutil`
+mido Docs: `https://mido.readthedocs.org/en/latest/`
